@@ -1,0 +1,30 @@
+body {
+  background-color: green;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+section{
+}
+
+#albumContainer{
+  padding: 10px;
+
+}
+img{
+  object-fit:cover;
+  width:450px;
+}
+
+article{
+  
+}
+article::after{
+  padding:20px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: blue;
+  }
+}

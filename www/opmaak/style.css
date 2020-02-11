@@ -1,0 +1,48 @@
+body {
+  font-family:sans-serif;
+  background-color: green;
+  display:grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-gap:1em;
+    justify-items:center;
+}
+
+section{
+width: 450px;
+height:450px;
+overflow:hidden;
+}
+
+img{
+  object-fit:cover;
+  width:450px;
+}
+
+h1{
+  grid-column: 1/-1;
+}
+
+article{
+/*  height: 400px;*/
+transition-duration: .5s;
+  margin-top:-40px;
+  position:relative;
+  background-color:rgba(255,255,255,0.5);
+  box-sizing:border-box;
+  font-size: .8em;
+  height:450px;
+  padding:1em;
+}
+
+section:hover article{
+margin-top:-450px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: blue;
+  }
+}
