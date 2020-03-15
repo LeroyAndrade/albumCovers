@@ -5,13 +5,28 @@ body {
 
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   grid-gap:1em;
-    justify-items:center;
+  justify-items:center;
+}
+/*BONUS*/
+ol{display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  overflow: hidden;
+  list-style-type: none;
 }
 
+li:nth-child(even){
+  margin-left:100px;
+}
+section:nth-child(2n+2):hover{
+  overflow:auto;
+}
+/*END bonus*/
+
 section{
-width: 450px;
-height:450px;
-overflow:hidden;
+  width: 450px;
+  height:450px;
+  overflow:hidden;
 }
 
 img{
@@ -25,21 +40,25 @@ h1{
 
 article{
 /*  height: 400px;*/
-transition-duration: .5s;
-  margin-top:-40px;
   position:relative;
-  background-color:rgba(255,255,255,0.5);
-  box-sizing:border-box;
   font-size: .8em;
   height:450px;
   padding:1em;
 }
 
 section:hover article{
-margin-top:-450px;
+
+  margin-top:-465px;
+  cursor: pointer;
+  animation:myMove .8s forwards;
+  background-color:rgba(255,255,255,0.5);
 }
 
+@keyframes myMove{
+  10% {margin-top: 0px};
+  100% {margin-top: -450px};
 
+}
 
 @media only screen and (max-width: 600px) {
   body {
